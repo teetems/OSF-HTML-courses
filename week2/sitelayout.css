@@ -1,0 +1,40 @@
+.main-content{
+    background-color: aqua;
+    height: 500px;
+}
+.side1{
+    background-color: blueviolet;
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin: 10px 10px 0 10px;
+    padding: 50px 0px 0px 150px;
+}
+.side2{
+    background-color: chartreuse;
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin: 10px 10px 0 10px;
+    padding: 50px 0px 0px 150px;
+}
+.side3{
+    background-color: crimson;
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin: 10px 10px 0 10px;
+    padding: 50px 0px 0px 150px;
+}
+.btn1{
+background-color: brown;
+}
+.btn1, .btn2, .btn3{
+    background-color: coral;
+    width: 50px;
+    color: white;
+}
+h1{
+    background-color: chocolate;
+    width: 80px;
+}

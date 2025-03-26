@@ -1,0 +1,274 @@
+body{
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0; 
+ justify-items: center;
+ align-items: center; 
+}
+.top{
+    display: flex;
+    gap: 150px;  
+    justify-content: space-between;
+    flex-wrap: wrap; /*allows wrapping on smaller screens */
+}
+.top h1{
+    color:green ;
+    margin: 0;
+}
+.top h2{
+    margin: 0;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search-container input[type="text"]{
+    padding: 6px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* .search-container button:hover{ */
+    /* background-color: #4caf50;  */
+/* } */
+.login-button{
+    background-color: forestgreen;
+    color:white ;
+    padding: 6px 12px;
+    border-radius: 60px;
+    cursor: pointer;
+    margin-left:10px ;
+}
+.login-button:hover{
+    background-color: forestgreen;
+}
+/* navigation  menu */
+.tech-list{
+    display: flex;
+    /* justify-content: space-between;  */
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    /* list-style:none ;  */
+}
+.tech-list ul{
+    list-style: none;
+    display: flex;
+     flex-wrap: wrap;  /*wraps onsmall screens*/
+     justify-content: center;
+    
+}
+.tech-list ul li{
+    margin: 10px 15px;
+
+}
+.tech-list ul li a{
+    text-decoration:none ;
+    color:white ;
+    font-weight: bold;
+}
+.tutorial-header{
+    padding: 20px;
+    max-width: 800px;   
+    margin: auto;
+}
+.tutorial-header h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.button1{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    color: white;
+}
+.button1 button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}   
+    
+.button1 button a{
+    color: white;
+    text-decoration: none;
+}
+
+.a{ 
+    margin-left: 0;
+    background-color:green ;
+    color: white;    
+}
+.b{
+    float: right;
+    background-color: green;
+}
+.content p{
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.content{
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(131, 253, 132);
+    height: 300px;
+   
+}
+
+             
+/* .tutorial-header button{
+           color: white;
+           border: none;
+           cursor: pointer;
+           border-radius: 4px;  
+} */
+       
+       /* .button1 a{
+        Width: 50px;
+           height: 30px;
+           border-radius: 4px;
+           cursor: pointer;
+       } */
+       /* .button1 a{ */
+           /* text-decoration: none;
+           font-style: normal;
+           font-weight: bold;
+           color: white;
+       } */
+       .t-buttons {
+           margin-top: 2rem;
+           display: flex;
+           flex-direction: column;
+           gap: 1rem;
+       }
+       
+       .btn {
+           text-decoration: none;
+           border-radius: 4px;
+           color: white;
+           cursor: pointer;
+            display: inline-block;
+            padding: 10px;  
+              
+       }
+       
+       .tutorial-btn {
+        background-color: darkgreen;
+           height: 25px;
+           width: 250px;
+           border-radius: 3px;
+           border: none;
+           margin-bottom:5px ;
+           /* width: 100px; */
+       } 
+       
+       .video-btn {
+           background-color: #000;
+           height: 25px;
+           width: 200px;
+           border-radius: 3px;
+           margin-bottom: 5px; 
+       }
+       .hr{
+           border:1px solid #000;
+           margin:20px auto ;
+           max-width:800px ;
+       }
+       .cont-2{
+        padding: 20px;
+        margin: 0 auto; 
+        max-width: 800px;
+       }
+       .cont-2 h1{
+        /* text-decoration: none;
+        cursor: pointer; */
+       margin-top: 20px;
+       }
+       .tap{
+        background-color: #333; 
+        color: #000;
+        border-radius: 4px;
+        border: none;
+        max-width: 200px;
+         height: 40px; 
+        padding: 10px 20px;
+       }
+       .tap a {
+        color: #000;
+        text-decoration:none ;
+       }
+        
+        
+       @media screen and (max-width:768px){
+.top{
+    flex-direction: column;
+    gap: 15px; ;
+    text-align: center;
+}
+.search-container{
+    flex-direction: column;
+    width: 100%;
+}
+.search-container input[type="text"]{
+width: 80%;
+}
+
+.tech-list ul{
+    flex-direction: column;
+}
+.tech-list ul li{
+    margin: 10px 0;
+}
+
+.button1{
+    flex-direction: column;
+    gap: 10px;
+}   
+    
+.content{
+    height: auto;
+}
+.tutorial-btn, .video-btn{
+    width: 100%;
+}
+.tap{
+    width: 100%;
+}
+
+}
+@media screen and(max-width:480px) {
+  .tutorial-header h1{
+    font-size: 2em;
+  }
+  .content p{
+    font-size: 1em;
+  }  
+} 
+    
+
+        
+        
+       
+        
+       
+        
+       
+
+       
+       
+       
+       
+       
+       
+       
+
+
+ 

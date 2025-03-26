@@ -1,0 +1,44 @@
+.columngridlayout{
+    background-color:white;
+}   
+.firstcolumn,
+ .secondcolumn,   
+.thirdcolumn{  
+ background-color: grey;
+    width: 28%;
+    height: 300px;
+    float: left;
+    margin: 0 10px;
+    padding-top: 50px ;
+    text-align: center;
+}
+.thirdcolumn:hover{
+    transform: scale(0.8);
+}
+.firstcolumn:hover{
+    transform: scale(0.7);
+}
+/* .secondcolumn{ */
+    /* background-color: grey;
+    width: 250px;
+    height: 400px;
+    float: left;
+    margin: 10px 10px 0 10px;
+    padding: 50px 0px 0px 150px; */
+
+/* .thirdcolumn{ */
+    /* background-color:grey; */
+    /* width: 250px; */
+    /* height: 400px; */
+    /* float: left; */
+    /* margin: 10px 10px 0 10px; */
+    /* padding: 50px 0px 0px 150px; */
+/* } */
+
+
+
+
+
+    
+
+    
