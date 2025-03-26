@@ -1,0 +1,96 @@
+l
+    body
+        {
+            background-color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+    
+ .title{
+    font-size:32px ;
+    font-weight: bold;
+    color: green;
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+     .subtitle{
+    font-size:18px ;
+        font-weight: bold;
+         color: red; 
+         margin-top: 10px;
+         text-align: center;
+        }
+        .icon{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        float: left;
+        }
+        .icon{
+        width: 20px;
+        height: 10px;
+        border: 2px solid green;
+         }
+            
+         /*leftupright text*/
+        .left-text{
+          left: 70px;
+         top: 300px;
+         transform: rotate(-90deg);
+          font-size: 14px;
+         color: green;
+        font-weight: bold;
+        white-space: nowrap;
+         float: right;
+            }
+            /* rightupright text*/
+            .right-text{
+                right: 70px;
+                top:300px;
+                transform: rotate(-90deg);
+                 font-size: 14px;
+                 color: green;
+                 font-weight: bold;
+                    white-space: nowrap;
+                    float: left;
+            }
+            .instruction {
+            font-size: 14px;
+            color: green;
+            margin-top: 15px;
+  }
+                    
+                
+            
+            
+                
+         /* make icon to float next to each other*/
+           
+ .icon{ float: left;
+         margin: 10px;
+        height: 30px;
+}
+                
+            
+            
+            
+
+            
+
+    
+            
+            
+        
+    
+
+    
+    
+    
+        
+    

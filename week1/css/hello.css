@@ -1,0 +1,27 @@
+
+        h1{background-color: red;
+            color: white;
+
+        }
+       p{
+        color: aqua;
+       }
+       h1{background-color: red;
+        color: white; /*
+        this is my comment
+        */
+
+    }
+   p{
+    color: #fe3f;
+    border: 2px solid red; 
+   }
+    p{
+        background-image:url(images/daily.png );
+        background-repeat:no repeat ;
+        background-position:right ;
+    }
+    p{
+        text-decoration-color: blueviolet;
+    }
+    
