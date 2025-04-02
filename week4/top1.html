@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Citizen Poster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .digiposter {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            
+            font-size: 28px;
+            font-weight: bold;
+            background-color: gainsboro;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .highlight {
+            font-size: 50px;
+            font-weight: bold;
+            color: black;
+            display: block;
+            
+        }
+        .highlight,h1{
+            background-color: gainsboro;
+        }
+
+        .sect {
+            
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            text-align: left;
+        }
+        .sect img{
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .sect h2 {
+            font-size: 24px;
+            margin:0;
+        }
+        
+
+
+        .inclusive h2 { color: blue; }
+        .informed h2 { color: darkblue; }
+        .engaged h2{ color: purple; }
+        .balanced h2 { color: red; }
+        .alert h2{ color: lightblue; }
+
+        .footer {
+            display: flex;
+            background-color: lightgray;
+            padding: 10px;
+            font-size: 14px;
+             justify-content: space-between; 
+        }
+        .footer img{
+            
+            /* margin-bottom:0; */
+            height: 30px;    
+        }
+        .brand span{
+            font-weight: bold;
+            font-size: 18px;
+            
+        }
+
+        
+        
+
+        @media (max-width: 600px) {
+            .digiposter {
+                max-width: 90%;
+                padding: 15px;
+            }
+            .sect {
+                flex-direction: column;
+                text-align: center;
+            }
+            .sect img {
+                margin-bottom: 5px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+
+<div class="digiposter">
+    <h1>I'm a<br> 
+        <span class="highlight">Digital Citizen</span></h1>
+    
+    <div class="sect inclusive">
+        <img src="/week4/images4/handshake.jpeg" alt="handshake" >
+        <h2> I'm inclusive</h2>
+    </div>
+        <p>I engage with others online with respect and empathy.</p>
+    
+
+    <div class="sect informed">
+        <img src="/week4/images4/lightbulb.jpeg" alt="lightbulb">
+        <h2> I'm informed</h2>
+    </div>
+        <p>I evaluate the accuracy, perspective, and validity of online information.</p>
+    
+
+    <div class="sect engaged">
+         <img src="/week4/images4/megaphone.jpeg" alt="megaphone" >
+         <h2>  I'm engaged</h2>
+        </div>
+        <p>I use technology for civic engagement and to be a force for good.</p>
+    
+
+    <div class="sect balanced">
+        <img src="/week4/images4/weigh balance.jpeg" alt="weighbalance"> 
+        <h2> I'm balanced</h2>
+    </div>
+        <p>I prioritize my time and activities online and offline.</p>
+    
+
+    <div class="sect alert">
+        <img src="/week4/images4/fingerprint.jpeg" alt="finger print"> 
+        <h2> I'm alert</h2>
+    </div>
+        <p>I know how to be safe online and create safe spaces for others.</p>
+    
+
+    <div class="footer">
+        <p class="brand"><span>DigCit</span><span class="commit">Commit</span><br>   
+digcitcommit.org<br>
+#digcitcommit</p>
+        <img src="/week4/images4/ISTE.jpeg">
+    
+        </div>
+    
+</div>
+
+</body>
+</html>

@@ -12,3 +12,6 @@ console.log(B**D)
 console.log(B++)
 console.log(B%D)
 
+
+
+
