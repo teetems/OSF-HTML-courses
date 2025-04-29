@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="controls">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+        </div>
+        <img id="clickable-image" src="/week8/gettyimages4.jpg" alt="Clickable Image">
+        <div id="text-display">Hello! This is the text!</div>
+        <img id="scaling-image" src="/week8/images (1).jpeg" alt="Scaling Image">
+        <div id="text-container">Hover or Click Me!</div>
+        <div id="form-container">
+            <h2>Sign Up</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="signup-button">Sign Up</button>
+        </div>
+    </div>
+    <div id="signin-container">
+        <h2>Sign In</h2>
+        <input type="text" id="signin-username" placeholder="Username">
+        <input type="password" id="signin-password" placeholder="Password">
+        <button id="signin-button">Sign In</button>
+    </div>
+
+    <script>
+        // Apply styles with JavaScript
+        function applyStyles() {
+            // Body
+            document.body.style.margin = '0';
+            document.body.style.fontFamily = 'Arial, sans-serif';
+            document.body.style.color = 'white';
+            document.body.style.textAlign = 'center';
+
+            // Main Container
+            const mainContainer = document.getElementById('main-container');
+            mainContainer.style.height = '100vh';
+            mainContainer.style.backgroundSize = 'cover';
+            mainContainer.style.backgroundPosition = 'center';
+            mainContainer.style.display = 'flex';
+            mainContainer.style.flexDirection = 'column';
+            mainContainer.style.justifyContent = 'center';
+            mainContainer.style.alignItems = 'center';
+            mainContainer.style.position = 'relative';
+
+            // Controls
+            const controls = document.getElementById('controls');
+            controls.style.position = 'absolute';
+            controls.style.top = '20px';
+            controls.style.width = '100%';
+            controls.style.display = 'flex';
+            controls.style.justifyContent = 'space-between';
+            controls.style.padding = '0 20px';
+
+            // Buttons
+            const buttons = document.getElementsByTagName('button');
+            for (let button of buttons) {
+                button.style.padding = '10px 20px';
+                button.style.fontSize = '16px';
+                button.style.cursor = 'pointer';
+                button.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                button.style.color = 'white';
+                button.style.border = 'none';
+                button.style.borderRadius = '5px';
+            }
+
+            // Clickable Image
+            const clickableImage = document.getElementById('clickable-image');
+            clickableImage.style.width = '100px';
+            clickableImage.style.height = '100px';
+            clickableImage.style.cursor = 'pointer';
+            clickableImage.style.margin = '20px';
+
+            // Text Display
+            const textDisplay = document.getElementById('text-display');
+            textDisplay.style.display = 'none';
+            textDisplay.style.fontSize = '24px';
+            textDisplay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            textDisplay.style.padding = '10px';
+            textDisplay.style.borderRadius = '5px';
+
+            // Scaling Image
+            const scalingImage = document.getElementById('scaling-image');
+            scalingImage.style.width = '80px';
+            scalingImage.style.height = '80px';
+            scalingImage.style.cursor = 'pointer';
+            scalingImage.style.margin = '20px';
+
+            // Text Container
+            const textContainer = document.getElementById('text-container');
+            textContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            textContainer.style.padding = '20px';
+            textContainer.style.borderRadius = '10px';
+            textContainer.style.margin = '20px';
+            textContainer.style.cursor = 'pointer';
+
+            // Form Container
+            const formContainer = document.getElementById('form-container');
+            formContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            formContainer.style.padding = '20px';
+            formContainer.style.borderRadius = '10px';
+            formContainer.style.display = 'block';
+
+            // Sign-In Container
+            const signinContainer = document.getElementById('signin-container');
+            signinContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            signinContainer.style.padding = '20px';
+            signinContainer.style.borderRadius = '10px';
+            signinContainer.style.display = 'none';
+            signinContainer.style.position = 'absolute';
+            signinContainer.style.top = '50%';
+            signinContainer.style.left = '50%';
+            signinContainer.style.transform = 'translate(-50%, -50%)';
+
+            // Inputs
+            const inputs = document.getElementsByTagName('input');
+            for (let input of inputs) {
+                input.style.display = 'block';
+                input.style.margin = '10px auto';
+                input.style.padding = '10px';
+                input.style.width = '200px';
+                input.style.borderRadius = '5px';
+                input.style.border = 'none';
+            }
+        }
+
+        // Background image slider
+        const images = [
+            '/week8/gettyimages-5.jpg',
+            '/week8/images(1).jpeg',
+            '/week8/images.jpeg'
+        ];
+        let currentImageIndex = 0;
+        const mainContainer = document.getElementById('main-container');
+        mainContainer.style.backgroundImage = `url(${images[currentImageIndex]})`;
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            mainContainer.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            mainContainer.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        }
+
+        // Clickable image to show text
+        const clickableImage = document.getElementById('clickable-image');
+        const textDisplay = document.getElementById('text-display');
+        clickableImage.addEventListener('click', () => {
+            textDisplay.style.display = textDisplay.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Scaling image with color change and animation
+        const scalingImage = document.getElementById('scaling-image');
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00'];
+        let colorIndex = 0;
+        let scale = 1;
+        let scaleDirection = 0.005; // Controls scaling speed
+
+        function animateScale() {
+            scale += scaleDirection;
+            if (scale >= 1.2 || scale <= 1) {
+                scaleDirection = -scaleDirection; // Reverse direction
+            }
+            scalingImage.style.transform = `scale(${scale})`;
+            requestAnimationFrame(animateScale);
+        }
+        animateScale(); // Start scaling animation
+
+        scalingImage.addEventListener('click', () => {
+            colorIndex = (colorIndex + 1) % colors.length;
+            scalingImage.style.backgroundColor = colors[colorIndex];
+        });
+
+        // Text container with mouseover and click
+        const textContainer = document.getElementById('text-container');
+        const texts = ['Text 1', 'Text 2', 'Text 3'];
+        let textIndex = 0;
+        textContainer.addEventListener('mouseover', () => {
+            textContainer.textContent = 'Hovered!';
+        });
+        textContainer.addEventListener('mouseout', () => {
+            textContainer.textContent = texts[textIndex];
+        });
+        textContainer.addEventListener('click', () => {
+            textIndex = (textIndex + 1) % texts.length;
+            textContainer.textContent = texts[textIndex];
+        });
+
+        // Sign-up form submission
+        function submitForm() {
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (username && email && password) {
+                mainContainer.style.display = 'none';
+                document.getElementById('signin-container').style.display = 'block';
+            } else {
+                alert('Please fill all fields');
+            }
+        }
+
+        // Sign-in form submission
+        function signIn() {
+            const username = document.getElementById('signin-username').value;
+            const password = document.getElementById('signin-password').value;
+            if (username && password) {
+                alert('Signed in successfully!');
+            } else {
+                alert('Please fill all fields');
+            }
+        }
+
+        // Event listeners for buttons
+        document.getElementById('prev-button').addEventListener('click', previousImage);
+        document.getElementById('next-button').addEventListener('click', nextImage);
+        document.getElementById('signup-button').addEventListener('click', submitForm);
+        document.getElementById('signin-button').addEventListener('click', signIn);
+
+        // Apply styles on page load
+        applyStyles();
+    </script>
+</body>
+</html>

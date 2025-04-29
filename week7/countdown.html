@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+    } */
+    body {
+  font-family: Arial, sans-serif;
+  background-color: mediumspringgreen;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+    }
+    #countdown {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contentbox {
+  background-color: mediumorchid;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+  min-width: 80px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+@keyframes pulse {
+      0% {
+        transform: scale(1);
+        background-color:hotpink;
+      }
+      50% {
+        transform: scale(1.1);
+        background-color:gold;
+      }
+      100% {
+        transform: scale(1);
+        background-color:deepskyblue;
+      }
+    }
+
+    .animate-pulse {
+      animation: pulse 0.5s ease;
+    }
+
+    /* ❄️ Snowflake style */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: #fff !important;
+      font-size: 24px;
+      pointer-events: none;
+      animation: fall 10s linear infinite;
+      z-index: 9999;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) translateX(30px);
+        opacity: 0;
+      }
+    }
+  </style>
+
+
+  
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Countdown to December 25th</h1>
+<div id="countdown"></div>
+
+  <!-- <div class="container"> -->
+    <!-- <h1>Countdown to December 25th</h1> -->
+    <div id="countdown">
+      <div class="contentbox"><span id="days"></span><div class="label">Days</div></div>
+      <div class="contentbox"><span id="hours"></span><div class="label">Hours</div></div>
+      <div class="contentbox"><span id="minutes"></span><div class="label">Minutes</div></div>
+      <div class="contentbox"><span id="seconds"></span><div class="label">Seconds</div></div>
+    </div>
+  </div>
+
+<!-- ❄️ Snowflakes -->
+<span class="snowflake" style="left: 10%;">❄️</span>
+<span class="snowflake" style="right: 30%; animation-delay: 2s;">❄️</span>
+<span class="snowflake" style="left: 50%; animation-delay: 4s;">❄️</span>
+<span class="snowflake" style="right: 70%; animation-delay: 1s;">❄️</span>
+<span class="snowflake" style="left: 90%; animation-delay: 3s;">❄️</span>
+
+
+</body>
+
+
+
+<script>
+  // Set count down date: December 25 of this year
+  const now = new Date();
+  let countdowndate = new Date(now.getFullYear(), 11, 25); 
+
+
+  
+    function animateBox(id) {
+  const element = document.getElementById(id);
+  const box = element.parentElement;
+  box.classList.remove('animate-pulse');
+  void box.offsetWidth;
+  box.classList.add('animate-pulse');
+}
+function updateCountdown() {
+    const currentTime = new Date().getTime();
+    const distance = countdowndate - currentTime;
+
+
+    // Time calculations
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+    animateBox("minutes");
+      animateBox("seconds");
+    // Display result
+    // document.getElementById("countdown").innerHTML =
+    //   `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+  setInterval(updateCountdown, 1000);
+
+</script>
+
+</body>
+</html>

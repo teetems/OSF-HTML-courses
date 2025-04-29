@@ -35,7 +35,6 @@ body{
 /* } */
 .login-button{
     background-color: forestgreen;
-    color:white ;
     padding: 6px 12px;
     border-radius: 60px;
     cursor: pointer;
@@ -43,13 +42,15 @@ body{
 }
 .login-button:hover{
     background-color: forestgreen;
+    color:white; 
 }
+
 /* navigation  menu */
 .tech-list{
     display: flex;
     /* justify-content: space-between;  */
     align-items: center;
-    background-color: black;
+    background-color:black;
     color: white;
     padding: 0;
     max-width: 800px;

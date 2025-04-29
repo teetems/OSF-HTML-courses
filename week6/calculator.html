@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:bisque;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+
+        .calculator {
+            background-color: rgb(161, 45, 45);
+            max-width: 300px;
+            margin: auto;
+            /* height: 90px; */
+            padding: 80px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .container {
+            height: 50px;
+        }
+        .container text{
+            border-radius: 20px;
+        }
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="datetime"></div>
+        <div class="calculator">
+         <input  type="number" id= "display" placeholder="first"><br><br>
+          <input type="number" id="display2" placeholder="second" ><br><br>
+    <input type="text" id="resulthere" placeholder="result here" read only>
+    <select id="operator">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (-)</option>
+        <option value="*">Multiplication (*)</option>
+        <option value="/">Division (/)</option>
+    </select><br>
+    <button
+            onclick= "compute()">calculate      
+        </button>
+        
+        </div>
+    </div>
+<script src="calculator.js">
+    
+</script>
+</body>
+</html>

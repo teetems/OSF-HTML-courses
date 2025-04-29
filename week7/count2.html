@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown </title>
+    <link rel="stylesheet" type="text/css" href="countt2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>count down to december 25th</h1>
+    <div id="countdown">
+        <div class="contentbox"><span id="days">0</span>D</div>
+        <div class="contentbox"><span id="hours">0</span>H</div>
+        <div class="contentbox"><span id="minutes">0</span>M</div>
+        <div class="contentbox"><span id="seconds">0</span>S</div>
+      </div>
+      </div>
+
+    <script>
+const now = new Date();
+  let countDownDate = new Date(now.getFullYear(), 11, 25); 
+
+  function updateCountdown() {
+    const currentTime = new Date().getTime();
+    const timeDistance = countDownDate - currentTime;
+    
+    const days = Math.floor(timeDistance/(1000 * 60* 60 * 24));
+    const hours = Math.floor(timeDistance/(1000 * 60* 60) % 24) ;
+    const minutes = Math.floor(timeDistance/(1000 * 60) % 60) ;
+    const seconds = Math.floor(timeDistance/(1000)% 60);
+
+    document.getElementById("days").textContent = days;
+document.getElementById("hours").textContent = hours;
+document.getElementById("minutes").textContent = minutes;
+document.getElementById("seconds").textContent = seconds;
+
+    
+    // document.getElementById("countdown").innerHTML =
+    //   `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  
+  }
+  updateCountdown();
+
+  setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+      body{
+        font-family: Arial, sans-serif;
+            background-color:yellow;
+            /* text-align: center; */
+            margin: 0;
+            padding: 0;
+            
+      }
+      #countdown {
+      /* font-size: 2rem; */
+      /* font-weight: bold; */
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+       
+    }
+    .container{
+        max-width: 500px;
+        /* height: fit-content; */
+        margin: 50px auto;
+        padding: 20px;
+    }
+    h1{
+      font-size: 2rem;
+color: #333;
+/* margin-bottom: 30px; */
+text-transform: uppercase;
+    }
+
+ .contentbox{ 
+  padding: 10px 20px;
+  background-color: chartreuse;
+  border-radius: 15px;
+  /* text-align: center; */
+  justify-content:center;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 8px rosybrown;
+  display: flex;
+  flex-direction: column;
+
+ }
+  .contentbox span{
+    margin:0 auto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: hotpink;
+  }  
+/* .time-box {
+  
+}
+     */
+    
+    /* #days, #hours, #minutes, #seconds{
+      background-color: red; */
+    

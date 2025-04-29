@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc 2</title>
+</head>
+<body>
+    <form action="" id="my_form" oninput= "calc()">
+    <h2>Calculator</h2>
+        <input  type="number" id= "length" placeholder="first"><br><br>
+    <input type="number" id="breadth" placeholder="second" ><br><br>  
+<button onclick="calc()">submit</button>
+<p id="addition" > The addition is 0</p>
+<p id="Subtraction">The subtraction is 0</p>
+    </form>
+<script>
+    function calc(){
+let length = parseFloat(document.getElementById("length").value);  
+let breadth =parseFloat(document.getElementById("breadth").value);
+
+let add = length + breadth;
+let sub = length - breadth;
+document.getElementById("addition").innerHTML = "The addition is" +"" + add;
+document.getElementById("Subtraction").innerHTML = "The subtraction is" +""+ sub;
+}
+calc()
+
+</script>
+ 
+</body>
+</html>
+
+
